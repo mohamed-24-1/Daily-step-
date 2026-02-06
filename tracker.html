@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+  <a href="tracker.html">Tracker</a>
+  <a href="history.html">History</a>
+  <a href="tips.html">Tips</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="container center">
+  <div class="card">
+    <h2>Daily Step Tracker</h2>
+
+    <!-- Separate Goal and Steps -->
+    <input type="number" id="goalInput" placeholder="Set Goal (steps)">
+    <button onclick="setGoal()">Set Goal</button>
+
+    <input type="number" id="stepInput" placeholder="Add Steps Walked">
+    <button onclick="addSteps()">Add Steps</button>
+
+    <p>Goal: <span id="goalText">0</span></p>
+    <p>Steps: <span id="stepText">0</span></p>
+    <p>Progress: <span id="progress">0 / 0</span></p>
+
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>

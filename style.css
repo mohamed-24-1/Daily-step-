@@ -1,0 +1,297 @@
+/* =========================
+   RESET & GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d1f2a, #549b1d); /* Dark night → soft blue */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 18px;
+  margin: 25px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 22px;
+  border-radius: 18px;
+  transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+  background: linear-gradient(90deg, #ff6a88, #ffb88c);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* =========================
+   CARD / BOX
+========================= */
+.container {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* GLOBAL CARD STYLE */
+.card, .welcome-box {
+  backdrop-filter: blur(25px);
+  padding: 60px 55px;
+  border-radius: 50px;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  width: 95%;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: 0.5s;
+}
+
+.card:hover, .welcome-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   LOGIN CARD
+========================= */
+.card.login-card {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+}
+
+/* =========================
+   SIGNUP CARD
+========================= */
+.card.signup-card {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #000;
+  border: none;
+}
+
+/* =========================
+   TRACKER CARD
+========================= */
+.card.tracker-card {
+  background: linear-gradient(135deg, #ff6a88, #ffb88c);
+  color: #fff;
+  border: none;
+}
+
+/* =========================
+   HISTORY/TIPS CARD
+========================= */
+.card.history-card, .card.tips-card {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* =========================
+   ABOUT / CONTACT CARD
+========================= */
+.card.about-card {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  color: #333;
+  border: none;
+}
+
+.card.contact-card {
+  background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+  color: #333;
+  border: none;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 380px;
+  max-width: 95%;
+  padding: 18px;
+  margin: 0 auto;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.35);
+  transition: all 0.4s ease;
+}
+
+.card.login-card input {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+.card.signup-card input {
+  background: rgba(255,255,255,0.25);
+  color: #000;
+}
+
+.card.tracker-card input {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+.card.about-card input,
+.card.contact-card input {
+  background: rgba(255,255,255,0.3);
+  color: #333;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button, .btn {
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: block;
+  margin: 25px auto 0 auto;
+  width: 300px;
+  max-width: 90%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 45px rgba(0,0,0,0.6);
+}
+
+/* Section specific button colors */
+button.login-btn {
+  background: #1a1aef;
+  color: #fff;
+}
+
+button.signup-btn {
+  background: #2affd6;
+  color: #000;
+}
+
+button.tracker-btn {
+  background: #ff5c7a;
+  color: #fff;
+}
+
+button.contact-btn {
+  background: #ffb84c;
+  color: #333;
+}
+
+button.about-btn {
+  background: #8e44ad;
+  color: #fff;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.progress-bar {
+  margin-top: 25px;
+  height: 30px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  transition: width 0.5s;
+  border-radius: 25px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   HISTORY & TIPS
+========================= */
+#historyList, #tipsList {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+#historyList li, #tipsList li {
+  background: rgba(255,255,255,0.25);
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+#historyList li:hover, #tipsList li:hover {
+  background: rgba(255,255,255,0.45);
+  transform: translateX(5px);
+}
+
+/* =========================
+   SMALL TEXT
+========================= */
+.small-text {
+  font-size: 14px;
+  margin-top: 12px;
+  color: #eee;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+  .navbar {
+    gap: 10px;
+  }
+  .card, .welcome-box {
+    padding: 45px 25px;
+  }
+  input, textarea, button {
+    width: 90%;
+    font-size: 15px;
+    padding: 16px;
+  }
+}
